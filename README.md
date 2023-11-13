@@ -46,8 +46,8 @@ Brainfuck is not a commonly used programming language, but it is an interesting 
 | `,`         | Input a value and store it at the data pointer |
 | `[`         | Jump past the matching `]` if the value at the data pointer is zero |
 | `]`         | Jump back to the matching `[` if the value at the data pointer is nonzero |
-| '{'         | Move the code poniter to left for the value at the data pointer step |
-| '}'         | Move the code poniter to right for the value at the data pointer step |
+| `{`         | Move the code poniter to left for the value at the data pointer step |
+| `}`         | Move the code poniter to right for the value at the data pointer step |
 
 ## Dependence
 
