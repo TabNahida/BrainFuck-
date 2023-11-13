@@ -34,6 +34,23 @@ Brainfuck is not a commonly used programming language, but it is an interesting 
 
 **Brain Fuck Plus Plus (BF++)** is a project that aims to improve the **Brainfuck** language by adding new features such as functions, working threads, and a virtual machine. The project also includes a binary execution compiler and support for multi-symbol strings. These features make the language more practical and useful for real-world development.
 
+## Document
+
+| **Command** | **Description** |
+|-------------|-----------------|
+| `>`         | Move the data pointer to the right |
+| `<`         | Move the data pointer to the left |
+| `+`         | Increment the value at the data pointer |
+| `-`         | Decrement the value at the data pointer |
+| `.`         | Output the value at the data pointer |
+| `,`         | Input a value and store it at the data pointer |
+| `[`         | Jump past the matching `]` if the value at the data pointer is zero |
+| `]`         | Jump back to the matching `[` if the value at the data pointer is nonzero |
+| '{'         | Move the code poniter to left for the value at the data pointer step |
+| '}'         | Move the code poniter to right for the value at the data pointer step |
+
 ## Dependence
 
 C++ 17 or higher
+
+
