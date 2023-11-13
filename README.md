@@ -2,7 +2,7 @@
 A C++ BrainFuck compiler and some additional function to form BrainFuck++
 ## Introduction
 
-## About Brain Fuck
+### About Brain Fuck
 
 **Brainfuck** is an **esoteric programming language** created in 1993 by Urban Müller¹. It is notable for its extreme minimalism, consisting of only eight simple commands, a data pointer, and an instruction pointer¹. The language is fully Turing complete, but it is not intended for practical use. Instead, it is designed to challenge and amuse programmers¹. 
 
@@ -30,5 +30,10 @@ Brainfuck is not a commonly used programming language, but it is an interesting 
 (3) brainfuck - Esolang. https://esolangs.org/wiki/Brainfuck.
 (4) Welcome - Getting started with BrainFuck - CodinGame. https://www.codingame.com/playgrounds/50426/getting-started-with-brainfuck/welcome.
 
-## About This Brain Fuck Plus Plus
+### About This Brain Fuck Plus Plus
 
+**Brain Fuck Plus Plus (BF++)** is a project that aims to improve the **Brainfuck** language by adding new features such as functions, working threads, and a virtual machine. The project also includes a binary execution compiler and support for multi-symbol strings. These features make the language more practical and useful for real-world development.
+
+## Dependence
+
+C++ 17 or higher
