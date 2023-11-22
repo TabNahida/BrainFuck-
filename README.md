@@ -23,12 +23,7 @@ Here are the eight commands in Brainfuck:
 | `[`         | Jump past the matching `]` if the value at the data pointer is zero |
 | `]`         | Jump back to the matching `[` if the value at the data pointer is nonzero |
 
-Brainfuck is not a commonly used programming language, but it is an interesting example of a Turing-complete language that can be used to explore the fundamentals of computer programming¹.
-
-(1) Brainfuck - Wikipedia. https://en.wikipedia.org/wiki/Brainfuck.
-(2) brainfuck – Wikipédia, a enciclopédia livre. https://pt.wikipedia.org/wiki/Brainfuck.
-(3) brainfuck - Esolang. https://esolangs.org/wiki/Brainfuck.
-(4) Welcome - Getting started with BrainFuck - CodinGame. https://www.codingame.com/playgrounds/50426/getting-started-with-brainfuck/welcome.
+Brainfuck is not a commonly used programming language, but it is an interesting example of a Turing-complete language that can be used to explore the fundamentals of computer programmin.
 
 ### About This Brain Fuck Plus Plus
 
