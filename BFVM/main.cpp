@@ -16,6 +16,21 @@ void runbf(string path,size_t varsize=1024)
     }
 }
 
+void runbfpp(string path,size_t varsize=1024)
+{
+    if (fs::exists(path))
+    {
+        ifstream bfin(path);
+        stringstream codein;
+        codein<<bfin.rdbuf();
+        
+    }
+    else
+    {
+        cout<<"BFPP file "<<path<<" not found"<<endl;
+    }
+}
+
 int main(int argc, char** argv)
 {
     if (argc < 3)
@@ -36,6 +51,18 @@ int main(int argc, char** argv)
         else
         {
             runbf(argv[2]);
+        }
+    }
+    else if (argv1 == "bfpp")
+    {
+        
+        if(argc >= 4)
+        {
+            runbfpp(argv[2],stoull(argv[3]));
+        }
+        else
+        {
+            runbfpp(argv[2]);
         }
     }
     return 0;
