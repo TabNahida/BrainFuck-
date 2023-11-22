@@ -9,6 +9,7 @@
 #include <thread>
 #include <chrono>
 using namespace std;
+namespace fs = std::filesystem;
 
 namespace BF
 {
@@ -62,7 +63,25 @@ private:
         }
     }
 
+    void runtimecoder()
+    {
+        switch (runtimecode)
+        {
+        case 0:
+            break;
+        case 1:
+            return runtimecoder();
+        case 2:
+            runtimecode++;
+            return runtimecoder();
+        default:
+            return runtimecoder();
+        }
+    }
+
 public:
+    int runtimecode = 0;
+
     BFVM(string code, size_t varsize = 1024)
     {
         codeline = code;
@@ -73,11 +92,12 @@ public:
     {
         for(;codepointer < codeline.size();codepointer++)
         {
+            runtimecoder();
             archasm(codeline[codepointer]);
         }
         return 0;
     }
 
-};
+};                    
 
 }
