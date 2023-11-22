@@ -68,6 +68,15 @@ public:
         codeline = code;
         varline.resize(varsize);
     }
+    
+    int runner()
+    {
+        for(;codepointer < codeline.size();codepointer++)
+        {
+            archasm(codeline[codepointer]);
+        }
+        return 0;
+    }
 
 };
 
