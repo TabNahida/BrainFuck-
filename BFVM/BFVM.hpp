@@ -52,11 +52,19 @@ private:
             }
             else
             {
-                for(;codeline[codepointer] != ']';codepointer++);
+                codepointer++;
+                for(size_t inner = 0;inner != 0 || codeline[codepointer] != ']';codepointer++)
+                {
+                    if(codeline[codepointer] == '[')
+                    inner++;
+                    else if(codeline[codepointer] == ']')
+                    inner--;
+                }
             }
             break;
         case ']':
-            codepointer = cyclestack.top();
+            codepointer = cyclestack.top() - 1;
+            cyclestack.pop();
             break;
         default:
             break;
