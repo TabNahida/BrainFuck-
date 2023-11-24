@@ -118,6 +118,7 @@ private:
     size_t varpointer = 0;
     stack<size_t> cyclestack;
     size_t arch = 1;
+    void (BF::BFPPVM::*archasm)(char);
 
     void archasm00(char input)
     {
@@ -245,14 +246,22 @@ public:
         varline.resize(varsize);
         arch = archno;
     }
-    
+
+    void stopvm()
+    {
+        
+    }
+
     int runner()
     {
-        auto archasm = archasm01;
+        archasm = &BF::BFPPVM::archasm01;
         switch (arch)
         {
         case 0:
-            archasm = archasm00;
+            archasm = &BF::BFPPVM::archasm00;
+            break;
+        case 1:
+            archasm = &BF::BFPPVM::archasm01;
             break;
         default:
             break;

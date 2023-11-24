@@ -16,6 +16,8 @@ void runbf(string path,size_t varsize=1024)
     }
 }
 
+size_t archno = 1;
+
 void runbfpp(string path,size_t varsize=1024)
 {
     if (fs::exists(path))
@@ -23,7 +25,8 @@ void runbfpp(string path,size_t varsize=1024)
         ifstream bfin(path);
         stringstream codein;
         codein<<bfin.rdbuf();
-        
+        BF::BFPPVM vm(codein.str(),varsize,archno);
+        vm.runner();
     }
     else
     {
@@ -55,6 +58,10 @@ int main(int argc, char** argv)
     }
     else if (argv1 == "bfpp")
     {
+        if(argc >= 5)
+        {
+            archno = stoull(argv[4]);
+        }
         
         if(argc >= 4)
         {
