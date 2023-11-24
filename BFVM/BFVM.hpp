@@ -232,6 +232,13 @@ private:
         case 2:
             runtimecode++;
             return runtimecoder();
+        case 3:
+            return runtimecoder();
+        case 4:
+            runtimecode++;
+            break;
+        case 5:
+            break;
         default:
             return runtimecoder();
         }
@@ -249,7 +256,13 @@ public:
 
     void stopvm()
     {
-        
+        for(runtimecode = 2;runtimecode != 3;);
+    }
+    
+    void restartvm()
+    {
+        for(runtimecode = 4;runtimecode != 5;);
+        runtimecode = 0;
     }
 
     int runner()
